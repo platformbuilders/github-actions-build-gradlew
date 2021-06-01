@@ -1,0 +1,13 @@
+name: GitHub actions build application
+author: Gabriel Ferreira <gabriel.oliveira@platformbuilders.io>
+description: GitHub action used to build aplications using gradlew
+branding:
+  icon: feather
+  color: gray-dark
+
+runs:
+  using: "composite"
+  steps:
+    - name: Gradlew Package
+      shell: bash
+      run: ./gradlew -i assemble -x test
